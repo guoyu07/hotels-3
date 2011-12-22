@@ -3,7 +3,8 @@
     .container
       = link_to "The Hotels", "#", :class => 'brand'
       %ul.nav
-        %li= link_to "Overview", "#overview"
+        %li= link_to "Dashboard", "#dashboard"
+        %li= link_to "Hotels", hotels_path
 
       %ul.nav.secondary-nav
         - if user_signed_in?

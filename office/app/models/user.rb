@@ -7,4 +7,8 @@ class User
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
+
+  belongs_to :account
+
+  delegate :hotels, to: :account
 end
