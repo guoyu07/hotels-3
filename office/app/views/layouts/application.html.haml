@@ -11,5 +11,5 @@
 
     .container{style: 'margin-top: 40px;'}
       = render "common/alerts"
-      = yield
+      = content_for?(:content) ? yield(:content) : yield
 

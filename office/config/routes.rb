@@ -9,7 +9,11 @@ Office::Application.routes.draw do
   root :to => 'home#index'
 
   scope path: '/office' do
-    resources :hotels
+
+    scope section: 'hotels' do
+      resources :hotels
+    end
+
   end
 
 end

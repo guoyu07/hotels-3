@@ -1,0 +1,10 @@
+= content_for :content do
+  %ul.tabs
+    %li= link_to 'General Information', '#'
+    -#- unless @hotel.new_record?
+    %li= link_to 'Room Types', '#'
+    %li= link_to 'Pricing', '#'
+
+  = content_for?(:hotel_content) ? yield(:hotel_content) : yield
+
+= render :template => 'layouts/application'
