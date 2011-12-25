@@ -2,17 +2,19 @@ body {
   background-color: #fff;
   position: relative;
 }
-section {
+
+.MainContainer {
   padding-top: 60px;
-}
-section > .row {
-  margin-bottom: 10px;
 }
 
 .FloatLeft {
-    float: left;
+  float: left;
 }
 
 .FloatRight {
-    float: right;
+  float: right;
+}
+
+.Clear {
+  clear: both;
 }

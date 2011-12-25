@@ -1,6 +1,6 @@
 - unless flash.empty?
   #Alerts
     - flash.each do |name, message|
-      .alert-message{:class => alert_class(name)}
+      .alert-message{:class => alert_class(name), :'data-alert' => ''}
         = link_to "×", "#", :class => 'close'
         %p= message
