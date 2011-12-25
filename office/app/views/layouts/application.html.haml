@@ -9,7 +9,11 @@
   %body
     = render "common/navigation"
 
-    .container{style: 'margin-top: 40px;'}
+    .container
       = render "common/alerts"
-      = content_for?(:content) ? yield(:content) : yield
+      %section
+        - if page_header.present?
+          .page-header
+            %h1= page_header
+        = content_for?(:content) ? yield(:content) : yield
 

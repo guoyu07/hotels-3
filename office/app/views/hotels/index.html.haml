@@ -1,1 +1,18 @@
-Hotels list will be here
+= link_to 'Add Hotel', new_hotel_path, :class => 'btn'
+%table
+  %thead
+    %tr
+      %th
+      %th Name
+      %th Contact Info
+      %th Room Types
+      %th
+  %tbody
+    - collection.each do |hotel|
+      %tr
+        %td
+        %td= link_to hotel.name, general_hotel_path(hotel)
+        %td Contact Info
+        %td Room Types
+        %td
+

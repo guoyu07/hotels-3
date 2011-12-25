@@ -11,7 +11,9 @@ Office::Application.routes.draw do
   scope path: '/office' do
 
     scope section: 'hotels' do
-      resources :hotels
+      resources :hotels do
+        get :general, on: :member, hotel_section: 'general'
+      end
     end
 
   end

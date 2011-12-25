@@ -7,6 +7,13 @@ GIT
       actionpack
       railties
 
+PATH
+  remote: vendor/gems/simple_form-2.0.0.dev
+  specs:
+    simple_form (2.0.0.dev)
+      actionpack (~> 3.0)
+      activemodel (~> 3.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -144,6 +151,7 @@ DEPENDENCIES
   mongoid
   rails (= 3.1.3)
   sass-rails (~> 3.1.5)
+  simple_form (= 2.0.0.dev)!
   symbolize
   twitter-bootstrap-rails!
   uglifier (>= 1.0.3)

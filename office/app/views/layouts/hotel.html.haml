@@ -1,9 +1,9 @@
 = content_for :content do
-  %ul.tabs
-    %li= link_to 'General Information', '#'
-    -#- unless @hotel.new_record?
-    %li= link_to 'Room Types', '#'
-    %li= link_to 'Pricing', '#'
+  - unless @hotel.new_record?
+    %ul.tabs
+      %li{:class => ('active' if params[:hotel_section] == 'general')}= link_to 'General Information', general_hotel_path(@hotel)
+      %li= link_to 'Room Types', '#'
+      %li= link_to 'Pricing', '#'
 
   = content_for?(:hotel_content) ? yield(:hotel_content) : yield
 
