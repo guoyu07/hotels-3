@@ -1,0 +1,12 @@
+= hotel.simple_fields_for hotel.object.address do |hotel_addr|
+  = hotel.input :name, hint: 'What is your hotel name?'
+  = hotel.input :website, hint: 'Home page or blog of your hotel'
+  = hotel_addr.input :phone
+  = hotel_addr.input :fax
+  = hotel_addr.input :email, hint: 'For example, user@domain.com'
+  = hotel_addr.input :address
+  = hotel_addr.input :city
+  = hotel_addr.input :state
+  = hotel_addr.input :zip_code
+  = hotel_addr.input :country, as: :string
+  = hotel.input :description, as: :text, input_html: {rows: '5'}, hint: 'Give us several words about your hotel'

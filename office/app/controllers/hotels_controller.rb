@@ -18,7 +18,10 @@ class HotelsController < BaseController
   end
 
   def update
-    update! { general_hotel_path(resource) }
+    update! do |success, failure|
+      success.html { redirect_to general_hotel_path(resource) }
+      failure.html { render :general }
+    end
   end
 
   protected
