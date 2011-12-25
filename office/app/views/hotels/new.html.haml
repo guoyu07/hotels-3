@@ -4,7 +4,6 @@
 = simple_form_for resource do |hotel|
   = hotel.simple_fields_for :address do |hotel_addr|
     = hotel.input :name
-    = hotel.input :description
     = hotel.input :website
     = hotel_addr.input :phone
     = hotel_addr.input :fax
@@ -14,6 +13,7 @@
     = hotel_addr.input :state
     = hotel_addr.input :zip_code
     = hotel_addr.input :country, as: :string
+    = hotel.input :description, as: :text, input_html: {rows: '5'}
   .actions
     = hotel.button :submit, 'Create Hotel', :class => 'primary'
     = link_to 'Cancel', hotels_path, :class => 'btn'

@@ -11,7 +11,10 @@ class HotelsController < BaseController
   end
 
   def create
-    create! { general_hotel_path(resource) }
+    create! do |success, failure|
+      success.html { redirect_to general_hotel_path(resource) }
+      failure.html { render :new }
+    end
   end
 
   def update

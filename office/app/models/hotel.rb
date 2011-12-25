@@ -12,4 +12,6 @@ class Hotel
   embeds_many :room_types
 
   embedded_in :account
+
+  validates_presence_of :name
 end
