@@ -1,4 +1,9 @@
 = hotel.simple_fields_for resource.address || resource.build_address do |hotel_addr|
+  - unless hotel.object.new_record?
+    = hotel.simple_fields_for resource.photo || resource.build_photo do |hotel_photo|
+      = hotel_photo.input :file, label: 'Picture' do
+        %img{src: hotel_photo.object.file.try(:url, :thumb), alt: '', class: 'thumbnail'}
+        %span= hotel_photo.input :file, wrapper: :empty
   = hotel.input :name, hint: 'What is your hotel name?'
   = hotel.input :website, hint: 'Home page or blog of your hotel'
   = hotel_addr.input :phone

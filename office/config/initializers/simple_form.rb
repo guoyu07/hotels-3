@@ -51,6 +51,10 @@ SimpleForm.setup do |config|
     end
   end
 
+  config.wrappers :empty do |b|
+    b.use :input
+  end
+
   # Method used to tidy up errors.
   # config.error_method = :first
 

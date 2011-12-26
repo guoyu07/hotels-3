@@ -11,6 +11,9 @@ gem 'haml-rails'
 
 gem 'devise'
 
+gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
+gem 'mini_magick'
+
 gem "symbolize", :require => "symbolize/mongoid"
 gem 'inherited_resources'
 gem 'simple_form', '= 2.0.0.dev', :path => 'vendor/gems/simple_form-2.0.0.dev'

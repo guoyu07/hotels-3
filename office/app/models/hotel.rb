@@ -10,6 +10,7 @@ class Hotel
 
   embeds_one :address, as: :addressable
   embeds_many :room_types
+  embeds_one :photo, as: :photoable
 
   embedded_in :account
 
