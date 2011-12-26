@@ -1,4 +1,4 @@
-= hotel.simple_fields_for hotel.object.address do |hotel_addr|
+= hotel.simple_fields_for resource.address || resource.build_address do |hotel_addr|
   = hotel.input :name, hint: 'What is your hotel name?'
   = hotel.input :website, hint: 'Home page or blog of your hotel'
   = hotel_addr.input :phone
