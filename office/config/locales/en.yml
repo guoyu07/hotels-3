@@ -2,4 +2,12 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  mongoid:
+    attributes:
+      room_type:
+        enums:
+          name:
+            single_room: Single Room
+            double_room: Double Room
+            twin_room: Twin Room
+            suite: Suite

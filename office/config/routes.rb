@@ -13,6 +13,8 @@ Office::Application.routes.draw do
     scope section: 'hotels' do
       resources :hotels do
         get :general, on: :member, hotel_section: 'general'
+
+        resources :room_types, hotel_section: 'room_types'
       end
     end
 

@@ -1,8 +1,13 @@
+= content_for(:page_header) do
+  = @hotel.name
+  - if params[:hotel_section] == 'general'
+    = link_to 'Delete', hotel_path(@hotel), method: :delete, confirm: 'Are you sure you want to delete this hotel?', :class => 'btn danger FloatRight'
+
 = content_for :content do
   - unless @hotel.new_record?
     %ul.tabs
       %li{:class => ('active' if params[:hotel_section] == 'general')}= link_to 'General Information', general_hotel_path(@hotel)
-      %li= link_to 'Room Types', '#'
+      %li{:class => ('active' if params[:hotel_section] == 'room_types')}= link_to 'Room Types', hotel_room_types_path(@hotel)
       %li= link_to 'Pricing', '#'
 
   = content_for?(:hotel_content) ? yield(:hotel_content) : yield

@@ -24,12 +24,6 @@ class HotelsController < BaseController
     end
   end
 
-  protected
-
-  def end_of_association_chain
-    current_user.hotels
-  end
-
   private
 
   def hotels_layout

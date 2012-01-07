@@ -1,0 +1,17 @@
+= link_to 'Add Room Type', new_hotel_room_type_path(@hotel), :class => 'btn'
+%table
+  %thead
+    %tr
+      %th
+      %th Room Type
+      %th Max People
+      %th
+      %th
+  %tbody
+    - collection.each do |room_type|
+      %tr
+        %td
+        %td= link_to room_type.name_text, edit_hotel_room_type_path(@hotel, room_type)
+        %td= room_type.max_people
+        %td
+        %td

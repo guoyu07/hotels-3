@@ -1,0 +1,5 @@
+= simple_form_for resource, url: [@hotel, resource] do |room_type|
+  = room_type.input :name, collection: RoomType.get_name_values
+  = room_type.input :max_people, as: :integer
+  .actions
+    = room_type.resource_submit

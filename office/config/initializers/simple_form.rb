@@ -132,5 +132,12 @@ module SimpleForm
       @template.field_set_tag(legend, options, &block)
     end
 
+    def resource_submit options = {}
+      label = options[:label] || begin
+        (@object.new_record? ? 'Create ' : 'Save ') << (options[:resource_name] || @object_name.titleize)
+      end
+      button :submit, label, :class => 'primary'
+    end
+
   end
 end

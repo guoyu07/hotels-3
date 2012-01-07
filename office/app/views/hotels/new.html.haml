@@ -4,5 +4,5 @@
 = simple_form_for resource do |hotel|
   = render partial: 'form', locals: { hotel: hotel }
   .actions
-    = hotel.button :submit, 'Create Hotel', :class => 'primary'
+    = hotel.resource_submit
     = link_to 'Cancel', hotels_path, :class => 'btn'
